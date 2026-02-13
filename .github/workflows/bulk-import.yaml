@@ -5,8 +5,8 @@ on:
 
 jobs:
   bulk-import-repos:
-    uses: G-Research/github-terraformer/.github/workflows/bulk-import.yaml@upgrade-terraform-terraform-provider-version
+    uses: G-Research/github-terraformer/.github/workflows/bulk-import.yaml@main
     with:
-      gcss_ref: upgrade-terraform-terraform-provider-version
+      gcss_ref: main
     secrets:
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
