@@ -48,7 +48,7 @@ rulesets:
     conditions:
       ref_name:
         exclude:
-          - ~DEFAULT
+          - ~DEFAULT_BRANCH
   - enforcement: active
     name: Protect default branch
     rules:
@@ -60,5 +60,5 @@ rulesets:
     conditions:
       ref_name:
         include:
-          - ~DEFAULT
+          - ~DEFAULT_BRANCH
 vulnerability_alerts_enabled: true
