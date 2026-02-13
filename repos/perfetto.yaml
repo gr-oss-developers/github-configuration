@@ -48,7 +48,7 @@ rulesets:
     conditions:
       ref_name:
         include:
-          - v*-gr
+          - refs/heads/v*-gr
         exclude:
           - ~DEFAULT_BRANCH
   - enforcement: active
