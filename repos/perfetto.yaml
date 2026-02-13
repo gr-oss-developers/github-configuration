@@ -34,7 +34,7 @@ rulesets:
         include:
           - ~ALL
   - enforcement: active
-    name: Protect all branches except default
+    name: Protect all gr branches except default
     rules:
       deletion: true
       non_fast_forward: true
@@ -47,6 +47,8 @@ rulesets:
     target: branch
     conditions:
       ref_name:
+        include:
+          - v*-gr
         exclude:
           - ~DEFAULT_BRANCH
   - enforcement: active
