@@ -22,6 +22,9 @@ archived: false
 has_discussions: false
 rulesets:
   - enforcement: active
+    bypass_actors:
+      - name: repository-admin-role
+        bypass_mode: always
     name: Protect all gr branches except default
     rules:
       deletion: true
