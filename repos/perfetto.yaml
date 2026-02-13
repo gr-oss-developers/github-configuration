@@ -22,18 +22,6 @@ archived: false
 has_discussions: false
 rulesets:
   - enforcement: active
-    name: Only admins can create new branches
-    rules:
-      creation: true
-    target: branch
-    bypass_actors:
-      - name: repository-admin-role
-        bypass_mode: always
-    conditions:
-      ref_name:
-        include:
-          - ~ALL
-  - enforcement: active
     name: Protect all gr branches except default
     rules:
       deletion: true
