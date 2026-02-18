@@ -39,7 +39,7 @@ rulesets:
     conditions:
       ref_name:
         include:
-          - refs/heads/v*-gr
+          - refs/heads/*-gr
         exclude:
           - ~DEFAULT_BRANCH
   - enforcement: active
