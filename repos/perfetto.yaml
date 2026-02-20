@@ -54,4 +54,15 @@ rulesets:
       ref_name:
         include:
           - ~DEFAULT_BRANCH
+  - enforcement: active
+    name: Protect all tags
+    rules:
+      deletion: true
+      non_fast_forward: true
+      update: true
+    target: tag
+    conditions:
+      ref_name:
+        include:
+          - refs/tags/v*
 vulnerability_alerts_enabled: true
