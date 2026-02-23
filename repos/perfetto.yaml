@@ -60,6 +60,7 @@ rulesets:
       deletion: true
       non_fast_forward: true
       update: true
+      update_allows_fetch_and_merge: true
     target: tag
     conditions:
       ref_name:
