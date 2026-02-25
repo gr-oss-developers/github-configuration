@@ -5,7 +5,7 @@ has_projects: true
 has_wiki: true
 has_downloads: true
 allow_merge_commit: false
-allow_rebase_merge: true
+allow_rebase_merge: false
 allow_squash_merge: true
 allow_auto_merge: false
 allow_update_branch: false
