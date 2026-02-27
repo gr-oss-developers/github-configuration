@@ -1,0 +1,56 @@
+description: Stress test repository 092 for terraform load testing
+visibility: public
+homepage_url: ""
+default_branch: main
+has_issues: false
+has_projects: true
+has_wiki: false
+has_downloads: true
+allow_merge_commit: false
+allow_rebase_merge: false
+allow_squash_merge: true
+allow_auto_merge: false
+allow_update_branch: false
+squash_merge_commit_title: COMMIT_OR_PR_TITLE
+squash_merge_commit_message: COMMIT_MESSAGES
+merge_commit_title: MERGE_MESSAGE
+merge_commit_message: PR_TITLE
+web_commit_signoff_required: false
+delete_branch_on_merge: true
+is_template: false
+archived: false
+has_discussions: false
+topics:
+  - stress-test
+  - platform
+  - infrastructure
+push_collaborators:
+  - pavlovic-ivan
+admin_teams:
+  - foo-bar-team
+rulesets:
+  - enforcement: active
+    name: protect-default
+    target: branch
+    rules:
+      deletion: true
+      non_fast_forward: true
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+        exclude:
+          - refs/heads/skip
+  - enforcement: active
+    name: protect-tags
+    target: tag
+    rules:
+      deletion: true
+      non_fast_forward: true
+    conditions:
+      ref_name:
+        include:
+          - refs/tags/*
+        exclude:
+          - refs/tags/draft-*
+vulnerability_alerts_enabled: false

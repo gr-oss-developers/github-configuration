@@ -1,0 +1,50 @@
+description: Stress test repository 018 for terraform load testing
+visibility: private
+homepage_url: ""
+default_branch: main
+has_issues: true
+has_projects: true
+has_wiki: false
+has_downloads: true
+allow_merge_commit: false
+allow_rebase_merge: false
+allow_squash_merge: true
+allow_auto_merge: false
+allow_update_branch: false
+squash_merge_commit_title: COMMIT_OR_PR_TITLE
+squash_merge_commit_message: COMMIT_MESSAGES
+merge_commit_title: MERGE_MESSAGE
+merge_commit_message: PR_TITLE
+web_commit_signoff_required: false
+delete_branch_on_merge: true
+is_template: false
+archived: false
+has_discussions: false
+topics:
+  - stress-test
+  - security
+  - compliance
+maintain_collaborators:
+  - pavlovic-ivan
+pull_teams:
+  - foo-bar-team
+rulesets:
+  - enforcement: active
+    name: require-status-checks
+    target: branch
+    rules:
+      deletion: true
+      required_status_checks:
+        required_check:
+          - context: ci/build
+            source: GitHub Actions
+          - context: ci/test
+            source: GitHub Actions
+        strict_required_status_checks_policy: true
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+        exclude:
+          - refs/heads/skip
+vulnerability_alerts_enabled: true
