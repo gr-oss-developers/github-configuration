@@ -9,9 +9,9 @@ on:
 
 jobs:
   import-repo:
-    uses: G-Research/github-terraformer/.github/workflows/import.yaml@apply-from-plan-file
+    uses: G-Research/github-terraformer/.github/workflows/import.yaml@main
     with:
       repo_name: ${{ github.event.inputs.repo_name }}
-      gcss_ref: apply-from-plan-file
+      gcss_ref: main
     secrets:
         app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
