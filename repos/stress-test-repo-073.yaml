@@ -1,0 +1,50 @@
+description: Stress test repository 073 for terraform load testing
+visibility: public
+homepage_url: ""
+default_branch: main
+has_issues: true
+has_projects: true
+has_wiki: false
+has_downloads: true
+allow_merge_commit: false
+allow_rebase_merge: true
+allow_squash_merge: false
+allow_auto_merge: false
+allow_update_branch: false
+squash_merge_commit_title: COMMIT_OR_PR_TITLE
+squash_merge_commit_message: COMMIT_MESSAGES
+merge_commit_title: MERGE_MESSAGE
+merge_commit_message: PR_TITLE
+web_commit_signoff_required: false
+delete_branch_on_merge: false
+is_template: false
+archived: false
+has_discussions: false
+topics:
+  - stress-test
+  - security
+  - compliance
+maintain_collaborators:
+  - pavlovic-ivan
+pull_teams:
+  - foo-bar-team
+rulesets:
+  - enforcement: active
+    name: require-pr-review
+    target: branch
+    rules:
+      deletion: true
+      non_fast_forward: true
+      pull_request:
+        dismiss_stale_reviews_on_push: true
+        require_code_owner_review: false
+        require_last_push_approval: true
+        required_approving_review_count: 1
+        required_review_thread_resolution: true
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+        exclude:
+          - refs/heads/skip
+vulnerability_alerts_enabled: true
