@@ -8,10 +8,10 @@ on:
 
 jobs:
   terraform-apply:
-    uses: G-Research/github-terraformer/.github/workflows/tf-apply.yaml@speed-up-terraform-run-with-targeting-phase1
+    uses: G-Research/github-terraformer/.github/workflows/tf-apply.yaml@main
     with:
       commit_sha: ${{ github.sha }}
-      gcss_ref: speed-up-terraform-run-with-targeting-phase1
+      gcss_ref: main
       tfc_org: "GR-OSS"
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}

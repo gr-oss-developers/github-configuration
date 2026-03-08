@@ -9,7 +9,7 @@ jobs:
   drift-check:
     secrets:
       tfc_token: ${{ secrets.TFC_TOKEN }}
-    uses: G-Research/github-terraformer/.github/workflows/drift-check.yaml@speed-up-terraform-run-with-targeting-phase1
+    uses: G-Research/github-terraformer/.github/workflows/drift-check.yaml@main
     with:
-      gcss_ref: speed-up-terraform-run-with-targeting-phase1
+      gcss_ref: main
       tfc_org: "GR-OSS"
