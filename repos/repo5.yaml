@@ -1,6 +1,7 @@
 visibility: private
 homepage_url: ""
 default_branch: main
+description: A repository for testing the GitHub Terraformer action
 has_issues: true
 has_projects: true
 has_wiki: true
