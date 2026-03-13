@@ -1,0 +1,136 @@
+default_branch: main
+description: Test repository for GitHub Pages published from a branch
+visibility: public
+homepage_url: https://example.com
+has_issues: true
+has_projects: true
+has_wiki: false
+has_downloads: false
+has_discussions: true
+allow_merge_commit: true
+allow_rebase_merge: true
+allow_squash_merge: true
+allow_auto_merge: false
+allow_update_branch: true
+squash_merge_commit_title: PR_TITLE
+squash_merge_commit_message: PR_BODY
+merge_commit_title: PR_TITLE
+merge_commit_message: PR_BODY
+web_commit_signoff_required: false
+delete_branch_on_merge: true
+is_template: false
+archived: false
+vulnerability_alerts_enabled: true
+topics:
+  - test
+  - pages
+  - branch
+
+pages:
+  build_type: legacy
+  branch: main
+  path: /docs
+  cname: docs.example.com
+
+pull_teams:
+  - my-readers-team
+push_teams:
+  - my-developers-team
+maintain_teams:
+  - my-maintainers-team
+pull_collaborators:
+  - some-external-user
+triage_collaborators:
+  - some-triage-user
+push_collaborators:
+  - some-contributor
+maintain_collaborators:
+  - some-maintainer
+
+rulesets:
+  - name: protect-main
+    enforcement: active
+    target: branch
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+        exclude: []
+    bypass_actors:
+      - name: repository-admin-role
+        bypass_mode: always
+      - name: team/my-maintainers-team
+        bypass_mode: pull_request
+      - name: app/github/actions
+        bypass_mode: always
+    rules:
+      deletion: true
+      non_fast_forward: true
+      required_linear_history: true
+      required_signatures: true
+      creation: false
+      update: true
+      update_allows_fetch_and_merge: false
+      pull_request:
+        required_approving_review_count: 1
+        dismiss_stale_reviews_on_push: true
+        require_code_owner_review: true
+        require_last_push_approval: true
+        required_review_thread_resolution: true
+      required_status_checks:
+        strict_required_status_checks_policy: true
+        required_check:
+          - context: build
+            source: app/github/actions
+          - context: test
+            source: app/github/actions
+      required_deployments:
+        required_deployment_environments:
+          - production
+      required_code_scanning:
+        required_code_scanning_tool:
+          - tool: CodeQL
+            alerts_threshold: errors
+            security_alerts_threshold: high_or_higher
+
+  - name: immutable-tags
+    enforcement: active
+    target: tag
+    conditions:
+      ref_name:
+        include:
+          - ~ALL
+        exclude: []
+    rules:
+      deletion: true
+      non_fast_forward: true
+      update: false
+
+branch_protections_v4:
+  - pattern: main
+    allows_deletions: false
+    allows_force_pushes: false
+    blocks_creations: false
+    enforce_admins: true
+    require_conversation_resolution: true
+    require_signed_commits: true
+    required_linear_history: true
+    restricts_pushes: false
+    lock_branch: false
+    push_restrictions:
+      - my-developers-team
+    required_pull_request_reviews:
+      required_approving_review_count: 1
+      dismiss_stale_reviews: true
+      require_code_owner_reviews: true
+      restrict_dismissals: true
+      dismissal_restrictions:
+        - my-maintainers-team
+      pull_request_bypassers:
+        - some-maintainer
+      require_last_push_approval: true
+    required_status_checks:
+      strict: true
+      contexts:
+        - build
+        - test
