@@ -3,7 +3,7 @@ visibility: public
 homepage_url: ""
 default_branch: main
 has_issues: true
-has_projects: true
+has_projects: false
 has_wiki: false
 has_downloads: true
 allow_merge_commit: true
