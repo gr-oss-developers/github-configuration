@@ -9,7 +9,7 @@ jobs:
   drift-check:
     secrets:
       tfc_token: ${{ secrets.TFC_TOKEN }}
-    uses: G-Research/github-terraformer/.github/workflows/drift-check.yaml@v0.2.4
+    uses: G-Research/github-terraformer/.github/workflows/drift-check.yaml@disable-state-refresh-in-plan
     with:
-      gcss_ref: v0.2.4
+      gcss_ref: disable-state-refresh-in-plan
       tfc_org: "GR-OSS"

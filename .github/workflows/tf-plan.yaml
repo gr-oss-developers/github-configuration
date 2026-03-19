@@ -8,10 +8,10 @@ on:
 
 jobs:
   terraform-plan:
-    uses: G-Research/github-terraformer/.github/workflows/tf-plan.yaml@v0.2.4
+    uses: G-Research/github-terraformer/.github/workflows/tf-plan.yaml@disable-state-refresh-in-plan
     with:
       commit_sha: ${{ github.event.workflow_run.head_sha }}
-      gcss_ref: v0.2.4
+      gcss_ref: disable-state-refresh-in-plan
       tfc_org: "GR-OSS"
     secrets:
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
