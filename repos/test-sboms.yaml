@@ -22,4 +22,4 @@ has_discussions: false
 vulnerability_alerts_enabled: true
 custom_properties:
   high_integrity: "false"
-  oss-lifecycle: published
+  oss-lifecycle: archived
