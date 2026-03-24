@@ -20,3 +20,5 @@ is_template: false
 archived: false
 has_discussions: false
 vulnerability_alerts_enabled: true
+custom_properties:
+  oss-lifecycle: active
