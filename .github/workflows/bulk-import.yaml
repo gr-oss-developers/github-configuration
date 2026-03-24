@@ -5,8 +5,8 @@ on:
 
 jobs:
   bulk-import-repos:
-    uses: G-Research/github-terraformer/.github/workflows/bulk-import.yaml@v0.2.4
+    uses: G-Research/github-terraformer/.github/workflows/bulk-import.yaml@add-support-for-custom-properties
     with:
-      gcss_ref: v0.2.4
+      gcss_ref: add-support-for-custom-properties
     secrets:
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}

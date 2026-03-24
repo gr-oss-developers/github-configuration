@@ -9,9 +9,9 @@ on:
 
 jobs:
   import-repo:
-    uses: G-Research/github-terraformer/.github/workflows/import.yaml@v0.2.4
+    uses: G-Research/github-terraformer/.github/workflows/import.yaml@add-support-for-custom-properties
     with:
       repo_name: ${{ github.event.inputs.repo_name }}
-      gcss_ref: v0.2.4
+      gcss_ref: add-support-for-custom-properties
     secrets:
         app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
