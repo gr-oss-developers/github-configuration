@@ -1,7 +1,7 @@
 description: Repository 9 created with Terraform tada
 visibility: public
 homepage_url: ""
-default_branch: master
+default_branch: main
 has_issues: true
 has_projects: true
 has_wiki: false
