@@ -5,8 +5,8 @@ on:
 
 jobs:
   bulk-import-repos:
-    uses: G-Research/github-terraformer/.github/workflows/bulk-import.yaml@fix-default-branch-issue
+    uses: G-Research/github-terraformer/.github/workflows/bulk-import.yaml@test-forking
     with:
-      gcss_ref: fix-default-branch-issue
+      gcss_ref: test-forking
     secrets:
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}

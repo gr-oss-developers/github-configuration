@@ -8,10 +8,10 @@ on:
 
 jobs:
   terraform-apply:
-    uses: G-Research/github-terraformer/.github/workflows/tf-apply.yaml@fix-default-branch-issue
+    uses: G-Research/github-terraformer/.github/workflows/tf-apply.yaml@test-forking
     with:
       commit_sha: ${{ github.sha }}
-      gcss_ref: fix-default-branch-issue
+      gcss_ref: test-forking
       tfc_org: "GR-OSS"
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
