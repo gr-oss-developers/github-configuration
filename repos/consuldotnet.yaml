@@ -21,3 +21,19 @@ is_template: false
 archived: false
 has_discussions: false
 vulnerability_alerts_enabled: true
+rulesets:
+  - enforcement: active
+    name: test
+    rules:
+      deletion: true
+      non_fast_forward: true
+      required_status_checks:
+        required_check:
+          - context: all-required-checks-complete
+            source: GitHub Actions
+        strict_required_status_checks_policy: true
+    target: branch
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
