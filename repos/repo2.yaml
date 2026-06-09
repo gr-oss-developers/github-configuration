@@ -29,6 +29,7 @@ rulesets:
     name: test
     rules:
       deletion: true
+      update: true
       non_fast_forward: true
       required_status_checks:
         required_check:
