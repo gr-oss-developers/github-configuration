@@ -27,6 +27,7 @@ rulesets:
     rules:
       deletion: true
       non_fast_forward: true
+      update: true
       required_status_checks:
         required_check:
           - context: all-required-checks-complete
