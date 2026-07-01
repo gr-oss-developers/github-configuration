@@ -20,4 +20,18 @@ delete_branch_on_merge: true
 is_template: false
 archived: false
 has_discussions: false
+rulesets:
+  - enforcement: active
+    name: Test
+    rules:
+      deletion: true
+      non_fast_forward: true
+    target: branch
+    bypass_actors:
+      - name: write-role
+        bypass_mode: pull_request
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
 vulnerability_alerts_enabled: true
