@@ -27,6 +27,9 @@ rulesets:
       deletion: true
       non_fast_forward: true
     target: branch
+    bypass_actors:
+      - name: write-role
+        bypass_mode: pull_request
     conditions:
       ref_name:
         include:
