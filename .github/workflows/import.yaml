@@ -9,9 +9,9 @@ on:
 
 jobs:
   import-repo:
-    uses: G-Research/github-terraformer/.github/workflows/import.yaml@v0.2.5
+    uses: G-Research/github-terraformer/.github/workflows/import.yaml@v0.2.6
     with:
       repo_name: ${{ github.event.inputs.repo_name }}
-      gcss_ref: v0.2.5
+      gcss_ref: v0.2.6
     secrets:
         app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
