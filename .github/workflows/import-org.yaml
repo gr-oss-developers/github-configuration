@@ -1,0 +1,12 @@
+name: Import organisation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  import-org:
+    uses: G-Research/github-terraformer/.github/workflows/import-org.yaml@v0.3.0-rc.1
+    with:
+      gcss_ref: v0.3.0-rc.1
+    secrets:
+      app_private_key: ${{ secrets.APP_PRIVATE_KEY }}

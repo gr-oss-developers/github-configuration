@@ -27,3 +27,6 @@ ignored_repos:
 #
 # The default page size is 100.
 #page_size: 100
+# Import GitHub repository environments (deployment protection rules, reviewers,
+# branch/tag deployment policies) into the generated config.
+feature_github_environments: true

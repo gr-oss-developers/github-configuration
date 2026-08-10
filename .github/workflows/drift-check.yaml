@@ -9,7 +9,9 @@ jobs:
   drift-check:
     secrets:
       tfc_token: ${{ secrets.TFC_TOKEN }}
-    uses: G-Research/github-terraformer/.github/workflows/drift-check.yaml@v0.2.6
+      app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
+    uses: G-Research/github-terraformer/.github/workflows/drift-check.yaml@v0.3.0-rc.1
     with:
-      gcss_ref: v0.2.6
+      gcss_ref: v0.3.0-rc.1
       tfc_org: "GR-OSS"
+      reviewers: ${{ vars.DRIFT_REVIEWERS }}

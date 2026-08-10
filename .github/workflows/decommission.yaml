@@ -1,0 +1,18 @@
+name: Decommission repository
+
+on:
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'Repository to decommission (matches repos/<repo>.yaml)'
+        required: true
+
+jobs:
+  decommission:
+    uses: G-Research/github-terraformer/.github/workflows/decommission.yaml@v0.3.0-rc.1
+    with:
+      repo: ${{ github.event.inputs.repo }}
+      gcss_ref: v0.3.0-rc.1
+      tfc_org: "GR-OSS"
+    secrets:
+      tfc_token: ${{ secrets.TFC_TOKEN }}
