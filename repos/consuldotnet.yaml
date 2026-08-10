@@ -28,7 +28,7 @@ rulesets:
       deletion: true
       non_fast_forward: true
       update: true
-      update_allow_fetch_and_merge: false
+      update_allows_fetch_and_merge: true
       required_status_checks:
         required_check:
           - context: all-required-checks-complete
