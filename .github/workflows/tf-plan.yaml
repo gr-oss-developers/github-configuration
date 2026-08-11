@@ -8,10 +8,10 @@ on:
 
 jobs:
   terraform-plan:
-    uses: G-Research/github-terraformer/.github/workflows/tf-plan.yaml@v0.3.0-rc.2
+    uses: G-Research/github-terraformer/.github/workflows/tf-plan.yaml@v0.3.0-rc
     with:
       commit_sha: ${{ github.event.workflow_run.head_sha }}
-      gcss_ref: v0.3.0-rc.2
+      gcss_ref: v0.3.0-rc
       tfc_org: "GR-OSS"
       protected_owners: ${{ vars.PROTECTED_OWNERS }}
     secrets:
