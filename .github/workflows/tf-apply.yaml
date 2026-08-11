@@ -1,14 +1,11 @@
 name: Terraform apply
 
-# TEMPORARY (v0.2.7 -> main test cycle): the automatic push trigger is disabled so that
-# landing the RC pin on main does not fire an unreviewed apply before the Phase 1 plan
-# gate has run. Restore the `push:` block below once Phase 1 reports a clean plan.
 on:
   workflow_dispatch:
-#  push:
-#    branches: [ main ]
-#    paths-ignore:
-#      - 'importer_tmp_dir/**'
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'importer_tmp_dir/**'
 
 jobs:
   terraform-apply:
