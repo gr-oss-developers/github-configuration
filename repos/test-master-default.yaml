@@ -32,8 +32,5 @@ environments:
       tag_patterns:
         - v*
   - environment: staging
-    reviewers:
-      teams:
-        - foo-bar-team
     deployment_policy:
       policy_type: protected_branches
