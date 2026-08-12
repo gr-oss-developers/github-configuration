@@ -1,0 +1,12 @@
+members:
+    - username: dev-milos
+      role: owner
+      teams:
+        - name: foo-bar-team
+          role: maintainer
+        - name: platform_core
+          role: maintainer
+        - name: security-review
+          role: maintainer
+    - username: pavlovic-ivan
+      role: owner
