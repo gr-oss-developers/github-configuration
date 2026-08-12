@@ -6,7 +6,7 @@ members:
           role: maintainer
         - name: platform_core
           role: maintainer
-        - name: security-review
-          role: maintainer
+        - name: release_engineering
+          role: member
     - username: pavlovic-ivan
       role: owner
