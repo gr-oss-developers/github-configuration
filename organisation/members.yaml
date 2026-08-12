@@ -1,6 +1,6 @@
 members:
     - username: dev-milos
-      role: owner
+      role: member
       teams:
         - name: foo-bar-team
           role: maintainer
@@ -8,5 +8,3 @@ members:
           role: maintainer
         - name: security-review
           role: maintainer
-    - username: pavlovic-ivan
-      role: owner
