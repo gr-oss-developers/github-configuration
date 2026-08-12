@@ -7,6 +7,6 @@ members:
         - name: platform_core
           role: maintainer
         - name: release_engineering
-          role: member
+          role: maintainer
     - username: pavlovic-ivan
       role: owner
