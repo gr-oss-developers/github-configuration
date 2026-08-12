@@ -7,7 +7,7 @@ teams:
     - name: platform_core
       slug: platform_core
       description: Underscore in the name, to exercise real slug capture
-      visibility: visible
+      visibility: banana
       notifications: true
     - name: security-review
       slug: security-review
