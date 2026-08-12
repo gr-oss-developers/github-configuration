@@ -65,3 +65,10 @@ rulesets:
         include:
           - refs/tags/v*
 vulnerability_alerts_enabled: true
+environments:
+  - environment: docker-hub
+    can_admins_bypass: false
+    deployment_policy:
+      policy_type: selected_branches_and_tags
+      tag_patterns:
+        - v*

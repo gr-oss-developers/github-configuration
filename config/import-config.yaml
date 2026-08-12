@@ -10,6 +10,7 @@
 ignored_repos:
   - "gr-oss-developers/github-configuration-self-service"
   - "gr-oss-developers/github-configuration"
+  - "gr-oss-developers/pr-dashboard"
 
 # List of repositories to be imported by the importer.
 #
