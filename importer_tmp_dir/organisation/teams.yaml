@@ -1,0 +1,16 @@
+teams:
+    - name: foo-bar-team
+      slug: foo-bar-team
+      description: A big foo bar team
+      visibility: visible
+      notifications: true
+    - name: platform_core
+      slug: platform_core
+      description: Underscore in the name, to exercise real slug capture
+      visibility: visible
+      notifications: true
+    - name: security-review
+      slug: security-review
+      description: Secret team with notifications disabled
+      visibility: secret
+      notifications: false
