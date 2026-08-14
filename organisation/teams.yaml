@@ -1,7 +1,7 @@
 teams:
     - name: foo-bar-team
       slug: foo-bar-team
-      description: A big foo bar team, now secret
+      description: A big foo bar team, description touched to exercise the plan summary
       visibility: secret
       notifications: false
     - name: platform_core
