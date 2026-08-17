@@ -10,3 +10,5 @@ members:
           role: maintainer
     - username: pavlovic-ivan
       role: owner
+    - username: nkbmilos
+      role: member
