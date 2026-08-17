@@ -11,4 +11,4 @@ members:
     - username: pavlovic-ivan
       role: owner
     - username: nkbmilos
-      role: member
+      role: owner
