@@ -22,3 +22,7 @@ teams:
       description: dev team
       visibility: visible
       notifications: true
+    - name: R3 Space Team
+      description: Team whose name is not its slug
+      visibility: visible
+      notifications: true

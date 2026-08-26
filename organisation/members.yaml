@@ -8,6 +8,8 @@ members:
           role: maintainer
         - name: release_engineering
           role: maintainer
+        - name: R3 Space Team
+          role: maintainer
     - username: pavlovic-ivan
       role: owner
     - username: mladjan-gadzic
