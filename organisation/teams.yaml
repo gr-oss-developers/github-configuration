@@ -18,7 +18,3 @@ teams:
       description: Added by config, never existed on GitHub
       visibility: visible
       notifications: true
-    - name: dev-team
-      description: Some imaginary dev team
-      visibility: visible
-      notifications: true
