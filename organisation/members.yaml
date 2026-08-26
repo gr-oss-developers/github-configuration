@@ -10,3 +10,8 @@ members:
           role: maintainer
     - username: pavlovic-ivan
       role: owner
+    - username: mladjan-gadzic
+      role: member
+      teams:
+        - name: dev-team
+          role: maintainer
