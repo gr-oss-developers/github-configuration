@@ -22,12 +22,3 @@ teams:
       description: Some imaginary dev team
       visibility: visible
       notifications: true
-    - name: Dev team
-      description: Some imaginary dev team 2
-      visibility: visible
-      notifications: true
-    - name: Dev team 2
-      slug: dev-team
-      description: Some imaginary dev team 2
-      visibility: visible
-      notifications: true
