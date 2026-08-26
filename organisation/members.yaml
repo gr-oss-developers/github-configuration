@@ -10,5 +10,3 @@ members:
           role: maintainer
     - username: pavlovic-ivan
       role: owner
-    - username: mladjan-gadzic
-      role: member
