@@ -14,4 +14,4 @@ members:
       role: member
       teams:
         - name: dev-team
-          role: member
+          role: maintainer
