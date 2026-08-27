@@ -13,7 +13,6 @@ jobs:
       commit_sha: ${{ github.event.workflow_run.head_sha }}
       gcss_ref: test/rc-cycle
       tfc_org: "GR-OSS"
-      protected_owners: ${{ vars.PROTECTED_OWNERS }}
     secrets:
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
       gh_token: ${{ secrets.GITHUB_TOKEN }}

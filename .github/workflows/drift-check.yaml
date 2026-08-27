@@ -14,4 +14,3 @@ jobs:
     with:
       gcss_ref: test/rc-cycle
       tfc_org: "GR-OSS"
-      reviewers: ${{ vars.DRIFT_REVIEWERS }}
