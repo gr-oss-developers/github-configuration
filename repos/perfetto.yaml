@@ -22,9 +22,6 @@ archived: false
 has_discussions: false
 rulesets:
   - enforcement: active
-    bypass_actors:
-      - name: repository-admin-role
-        bypass_mode: always
     name: Protect all gr branches except default
     rules:
       deletion: true
@@ -36,24 +33,15 @@ rulesets:
         required_approving_review_count: 1
         required_review_thread_resolution: false
     target: branch
+    bypass_actors:
+      - name: repository-admin-role
+        bypass_mode: always
     conditions:
       ref_name:
-        include:
-          - refs/heads/*-gr
         exclude:
           - ~DEFAULT_BRANCH
-  - enforcement: active
-    name: Protect default branch
-    rules:
-      deletion: true
-      non_fast_forward: true
-      update: true
-      update_allows_fetch_and_merge: false
-    target: branch
-    conditions:
-      ref_name:
         include:
-          - ~DEFAULT_BRANCH
+          - refs/heads/*-gr
   - enforcement: active
     name: Protect all tags
     rules:
@@ -66,6 +54,18 @@ rulesets:
       ref_name:
         include:
           - refs/tags/v*
+  - enforcement: active
+    name: Protect default branch
+    rules:
+      deletion: true
+      non_fast_forward: true
+      update: true
+      update_allows_fetch_and_merge: false
+    target: branch
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
 vulnerability_alerts_enabled: true
 environments:
   - environment: docker-hub
