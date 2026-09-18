@@ -10,7 +10,7 @@ jobs:
     secrets:
       tfc_token: ${{ secrets.TFC_TOKEN }}
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
-    uses: G-Research/github-terraformer/.github/workflows/drift-check.yaml@fix/non-main-default-branch-drift
+    uses: G-Research/github-terraformer/.github/workflows/drift-check.yaml@test/rc-cycle
     with:
-      gcss_ref: fix/non-main-default-branch-drift
+      gcss_ref: test/rc-cycle
       tfc_org: "GR-OSS"
