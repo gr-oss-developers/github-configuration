@@ -1,6 +1,6 @@
 description: Will it drift?
 visibility: public
-default_branch: main
+default_branch: master
 has_issues: true
 has_projects: true
 has_wiki: false
