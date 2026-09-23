@@ -9,10 +9,10 @@ on:
 
 jobs:
   terraform-apply:
-    uses: G-Research/github-terraformer/.github/workflows/tf-apply.yaml@test/branches-default-hardcode
+    uses: G-Research/github-terraformer/.github/workflows/tf-apply.yaml@non-main-default-branch-via-branches
     with:
       commit_sha: ${{ github.sha }}
-      gcss_ref: test/branches-default-hardcode
+      gcss_ref: non-main-default-branch-via-branches
       tfc_org: "GR-OSS"
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
