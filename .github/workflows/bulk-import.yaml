@@ -5,8 +5,8 @@ on:
 
 jobs:
   bulk-import-repos:
-    uses: G-Research/github-terraformer/.github/workflows/bulk-import.yaml@test/branches-default-hardcode
+    uses: G-Research/github-terraformer/.github/workflows/bulk-import.yaml@non-main-default-branch-via-branches
     with:
-      gcss_ref: test/branches-default-hardcode
+      gcss_ref: non-main-default-branch-via-branches
     secrets:
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
