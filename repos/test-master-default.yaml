@@ -1,6 +1,6 @@
 description: Phase 3 test - repository created with a non-main default branch
 visibility: public
-default_branch: master
+default_branch: main
 has_issues: true
 has_projects: false
 has_wiki: false
