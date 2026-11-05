@@ -5,8 +5,8 @@ on:
 
 jobs:
   import-org:
-    uses: G-Research/github-terraformer/.github/workflows/import-org.yaml@non-main-default-branch-via-branches
+    uses: G-Research/github-terraformer/.github/workflows/import-org.yaml@main
     with:
-      gcss_ref: non-main-default-branch-via-branches
+      gcss_ref: main
     secrets:
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
