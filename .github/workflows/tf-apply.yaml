@@ -9,10 +9,10 @@ on:
 
 jobs:
   terraform-apply:
-    uses: G-Research/github-terraformer/.github/workflows/tf-apply.yaml@main
+    uses: G-Research/github-terraformer/.github/workflows/tf-apply.yaml@f9a66f117507a28fd166edd1cddc10539d154220 # v0.3.0
     with:
       commit_sha: ${{ github.sha }}
-      gcss_ref: main
+      gcss_ref: f9a66f117507a28fd166edd1cddc10539d154220 # v0.3.0
       tfc_org: "GR-OSS"
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
