@@ -9,3 +9,9 @@ apps:
   - app_owner: gr-oss-developers
     app_id: 2319340
     app_slug: gr-oss-developers-test
+  - app_owner: warpdotdev
+    app_id: 2278701
+    app_slug: warp-factories
+  - app_owner: dev-milos
+    app_id: 4714985
+    app_slug: ospo-platform-local-dev-milos
