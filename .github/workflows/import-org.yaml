@@ -5,8 +5,8 @@ on:
 
 jobs:
   import-org:
-    uses: G-Research/github-terraformer/.github/workflows/import-org.yaml@f9a66f117507a28fd166edd1cddc10539d154220 # v0.3.0
+    uses: G-Research/github-terraformer/.github/workflows/import-org.yaml@fee46dcfb5df6d393b21f493a631812c8e69934e # v0.3.1
     with:
-      gcss_ref: f9a66f117507a28fd166edd1cddc10539d154220 # v0.3.0
+      gcss_ref: fee46dcfb5df6d393b21f493a631812c8e69934e # v0.3.1
     secrets:
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
