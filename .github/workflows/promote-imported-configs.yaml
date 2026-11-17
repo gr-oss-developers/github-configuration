@@ -10,10 +10,10 @@ on:
 jobs:
   promote:
     if: github.event.pull_request.merged == true
-    uses: G-Research/github-terraformer/.github/workflows/promote-imported-configs.yaml@fix/bump-actions-node24 # v0.3.1
+    uses: G-Research/github-terraformer/.github/workflows/promote-imported-configs.yaml@c16b1ae2a41015d888f3a5d4aa5474ba54cbffc8 # post-v0.3.1 (#90)
     with:
       commit_sha: ${{ github.event.pull_request.merge_commit_sha }}
-      gcss_ref: fix/bump-actions-node24 # v0.3.1
+      gcss_ref: c16b1ae2a41015d888f3a5d4aa5474ba54cbffc8 # post-v0.3.1 (#90)
       pr_number: ${{ github.event.pull_request.number }}
       tfc_org: "GR-OSS"
     secrets:

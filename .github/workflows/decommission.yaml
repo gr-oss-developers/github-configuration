@@ -9,10 +9,10 @@ on:
 
 jobs:
   decommission:
-    uses: G-Research/github-terraformer/.github/workflows/decommission.yaml@fix/bump-actions-node24 # v0.3.1
+    uses: G-Research/github-terraformer/.github/workflows/decommission.yaml@c16b1ae2a41015d888f3a5d4aa5474ba54cbffc8 # post-v0.3.1 (#90)
     with:
       repo: ${{ github.event.inputs.repo }}
-      gcss_ref: fix/bump-actions-node24 # v0.3.1
+      gcss_ref: c16b1ae2a41015d888f3a5d4aa5474ba54cbffc8 # post-v0.3.1 (#90)
       tfc_org: "GR-OSS"
     secrets:
       tfc_token: ${{ secrets.TFC_TOKEN }}

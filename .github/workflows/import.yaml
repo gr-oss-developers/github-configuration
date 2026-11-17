@@ -9,9 +9,9 @@ on:
 
 jobs:
   import-repo:
-    uses: G-Research/github-terraformer/.github/workflows/import.yaml@fix/bump-actions-node24 # v0.3.1
+    uses: G-Research/github-terraformer/.github/workflows/import.yaml@c16b1ae2a41015d888f3a5d4aa5474ba54cbffc8 # post-v0.3.1 (#90)
     with:
       repo_name: ${{ github.event.inputs.repo_name }}
-      gcss_ref: fix/bump-actions-node24 # v0.3.1
+      gcss_ref: c16b1ae2a41015d888f3a5d4aa5474ba54cbffc8 # post-v0.3.1 (#90)
     secrets:
         app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
