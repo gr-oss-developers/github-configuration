@@ -9,10 +9,10 @@ on:
 
 jobs:
   decommission:
-    uses: G-Research/github-terraformer/.github/workflows/decommission.yaml@c16b1ae2a41015d888f3a5d4aa5474ba54cbffc8 # post-v0.3.1 (#90)
+    uses: G-Research/github-terraformer/.github/workflows/decommission.yaml@7cabb59c07b729265e46e492514d5e19e85d75d7 # v0.4.0
     with:
       repo: ${{ github.event.inputs.repo }}
-      gcss_ref: c16b1ae2a41015d888f3a5d4aa5474ba54cbffc8 # post-v0.3.1 (#90)
+      gcss_ref: 7cabb59c07b729265e46e492514d5e19e85d75d7 # v0.4.0
       tfc_org: "GR-OSS"
     secrets:
       tfc_token: ${{ secrets.TFC_TOKEN }}
