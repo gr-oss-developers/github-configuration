@@ -1,0 +1,56 @@
+description: OSPO Platform - manage your org's open source presence, GitHub activity, policy compliance, and security posture
+visibility: private
+default_branch: main
+has_issues: true
+has_projects: true
+has_wiki: true
+allow_merge_commit: false
+allow_squash_merge: true
+allow_update_branch: true
+squash_merge_commit_title: PR_TITLE
+squash_merge_commit_message: BLANK
+push_collaborators:
+    - c-rindi
+rulesets:
+    - id: 25876452
+      enforcement: active
+      name: main
+      rules:
+        deletion: true
+        merge_queue:
+            merge_method: SQUASH
+            build_concurrency: 5
+            minimum_group_size: 1
+            maximum_group_size: 1
+            wait_time_to_meet_minimum_group_size: 5
+            require_all_queue_entries_to_pass_required_checks: true
+            status_check_timeout: 60
+        non_fast_forward: true
+        pull_request:
+            dismiss_stale_reviews_on_push: true
+            require_code_owner_review: false
+            require_last_push_approval: false
+            required_approving_review_count: 0
+            required_review_thread_resolution: true
+        required_linear_history: true
+        required_status_checks:
+            required_check:
+                - context: Backend build & test
+                  source: GitHub Actions
+                - context: Frontend build & lint
+                  source: GitHub Actions
+                - context: Dependency scan
+                  source: GitHub Actions
+                - context: Line endings
+                  source: GitHub Actions
+                - context: Image (backend)
+                  source: GitHub Actions
+                - context: Image (frontend)
+                  source: GitHub Actions
+            strict_required_status_checks_policy: false
+      target: branch
+      conditions:
+        ref_name:
+            include:
+                - ~DEFAULT_BRANCH
+vulnerability_alerts_enabled: true

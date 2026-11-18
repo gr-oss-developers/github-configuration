@@ -1,0 +1,18 @@
+description: Will it drift?
+visibility: public
+default_branch: master
+has_issues: true
+has_projects: true
+rulesets:
+    - id: 23871218
+      enforcement: active
+      name: A test
+      rules:
+        deletion: true
+        non_fast_forward: true
+      target: branch
+      conditions:
+        ref_name:
+            include:
+                - ~DEFAULT_BRANCH
+vulnerability_alerts_enabled: true
