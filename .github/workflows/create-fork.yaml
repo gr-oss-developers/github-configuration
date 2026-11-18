@@ -16,7 +16,7 @@ on:
 
 jobs:
   create-fork:
-    uses: G-Research/github-terraformer/.github/workflows/create-fork.yaml@fix/bump-actions-node24 # v0.3.1
+    uses: G-Research/github-terraformer/.github/workflows/create-fork.yaml@7cabb59c07b729265e46e492514d5e19e85d75d7 # v0.4.0
     with:
       upstream_repo: ${{ github.event.inputs.upstream_repo }}
       fork_name: ${{ github.event.inputs.fork_name }}

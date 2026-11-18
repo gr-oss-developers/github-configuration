@@ -9,10 +9,10 @@ on:
 
 jobs:
   terraform-apply:
-    uses: G-Research/github-terraformer/.github/workflows/tf-apply.yaml@fix/bump-actions-node24 # v0.3.1
+    uses: G-Research/github-terraformer/.github/workflows/tf-apply.yaml@7cabb59c07b729265e46e492514d5e19e85d75d7 # v0.4.0
     with:
       commit_sha: ${{ github.sha }}
-      gcss_ref: fix/bump-actions-node24 # v0.3.1
+      gcss_ref: 7cabb59c07b729265e46e492514d5e19e85d75d7 # v0.4.0
       tfc_org: "GR-OSS"
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}

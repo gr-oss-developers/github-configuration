@@ -5,8 +5,8 @@ on:
 
 jobs:
   import-org:
-    uses: G-Research/github-terraformer/.github/workflows/import-org.yaml@fix/bump-actions-node24 # v0.3.1
+    uses: G-Research/github-terraformer/.github/workflows/import-org.yaml@7cabb59c07b729265e46e492514d5e19e85d75d7 # v0.4.0
     with:
-      gcss_ref: fix/bump-actions-node24 # v0.3.1
+      gcss_ref: 7cabb59c07b729265e46e492514d5e19e85d75d7 # v0.4.0
     secrets:
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
