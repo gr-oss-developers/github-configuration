@@ -16,7 +16,7 @@ on:
 
 jobs:
   create-fork:
-    uses: G-Research/github-terraformer/.github/workflows/create-fork.yaml@7cabb59c07b729265e46e492514d5e19e85d75d7 # v0.4.0
+    uses: G-Research/github-terraformer/.github/workflows/create-fork.yaml@c6c4fedc73fc486196e61ed4beda54ae084ab359 # test: reduce-yaml-verbosity (#93)
     with:
       upstream_repo: ${{ github.event.inputs.upstream_repo }}
       fork_name: ${{ github.event.inputs.fork_name }}
