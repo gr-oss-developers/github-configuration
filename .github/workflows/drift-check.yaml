@@ -10,7 +10,7 @@ jobs:
     secrets:
       tfc_token: ${{ secrets.TFC_TOKEN }}
       app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
-    uses: G-Research/github-terraformer/.github/workflows/drift-check.yaml@da91e8f29c67158632b842121f80dd12e4cd6665 # test: reduce-yaml-verbosity (#93)
+    uses: G-Research/github-terraformer/.github/workflows/drift-check.yaml@229a5c89f91a8ff8dc1d6805de1021a4a8e0ccee # v0.5.0
     with:
-      gcss_ref: da91e8f29c67158632b842121f80dd12e4cd6665 # test: reduce-yaml-verbosity (#93)
+      gcss_ref: 229a5c89f91a8ff8dc1d6805de1021a4a8e0ccee # v0.5.0
       tfc_org: "GR-OSS"
