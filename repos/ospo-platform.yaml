@@ -5,7 +5,6 @@ has_issues: true
 has_projects: true
 has_wiki: true
 allow_merge_commit: false
-allow_squash_merge: true
 allow_update_branch: true
 squash_merge_commit_title: PR_TITLE
 squash_merge_commit_message: BLANK

@@ -2,7 +2,6 @@ description: Phase 3 test - repository created with a non-main default branch
 visibility: public
 default_branch: master
 has_issues: true
-allow_squash_merge: true
 vulnerability_alerts_enabled: true
 environments:
   - environment: production
