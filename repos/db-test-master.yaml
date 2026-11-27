@@ -2,3 +2,16 @@ description: throwaway test - branches-based master default
 visibility: public
 default_branch: master
 vulnerability_alerts_enabled: true
+rulesets:
+  - name: OSPO default branch
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+    rules:
+      deletion: true
+      non_fast_forward: true
+      pull_request:
+        required_approving_review_count: 1
