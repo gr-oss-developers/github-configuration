@@ -7,3 +7,16 @@ allow_rebase_merge: true
 delete_branch_on_merge: false
 is_template: true
 vulnerability_alerts_enabled: false
+rulesets:
+  - name: OSPO default branch
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+    rules:
+      deletion: true
+      non_fast_forward: true
+      pull_request:
+        required_approving_review_count: 1

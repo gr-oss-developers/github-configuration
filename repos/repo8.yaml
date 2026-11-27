@@ -13,3 +13,16 @@ environments:
       policy_type: selected_branches_and_tags
       branch_patterns:
         - main
+rulesets:
+  - name: OSPO default branch
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+    rules:
+      deletion: true
+      non_fast_forward: true
+      pull_request:
+        required_approving_review_count: 1
